@@ -1,0 +1,36 @@
+@(message: String, webJarAssets: WebJarAssets)
+
+@main("SparkStreaming")(webJarAssets) {
+<h1>
+    &nbsp;
+    <button type="button" class="btn btn-primary">P</button>
+    <button type="button" class="btn btn-success">L</button>
+    <button type="button" class="btn btn-info">A</button>
+    <button type="button" class="btn btn-warning">Y</button>
+    <button type="button" class="btn btn-danger">U</button>
+</h1>
+
+<div id="videoContainer">
+    <div id="overlay"> Please don't download the video.</div>
+    &nbsp;
+    <video width="60%" height="495" autoplay controls src="streamVideo" type="video/mp4">
+        Your browser does not support HTML5 video.
+    </video>
+</div>
+</div>
+
+<style>
+  div#videoContainer{
+    position: relative;
+  }
+  div#overlay {
+    font-weight: bold;
+    opacity: 1.0;
+    padding: 17em;
+    position: absolute;
+    z-index: 1;
+    text-align: center;
+  }
+
+</style>
+}
