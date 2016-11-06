@@ -14,6 +14,6 @@ class HomeController @Inject()(webJarAssets: WebJarAssets) extends Controller {
   }
 
   def streaming = Action {
-    Ok.sendFile(new File("/public/small.mp4"))
+    Ok.sendFile(new File("public/small.mp4"))
   }
 }
