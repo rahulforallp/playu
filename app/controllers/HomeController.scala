@@ -10,11 +10,14 @@ import play.api.mvc._
 @Singleton
 class HomeController @Inject()(webJarAssets: WebJarAssets) extends Controller {
 
-  def index = Action{
-    Ok(views.html.index("Your new application is ready.",webJarAssets))
+  def index = Action {
+    Ok(views.html.index("Your new application is ready.", webJarAssets))
   }
 
   def streaming = Action {
-    Ok.sendFile(new File("conf/medium.mp4"))
+    Ok.sendFile(
+      content = new File("conf/vid2.mp4"),
+      inline = true
+    )
   }
 }
