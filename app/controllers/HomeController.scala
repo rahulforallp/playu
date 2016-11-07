@@ -3,6 +3,7 @@ package controllers
 import java.io.File
 import javax.inject._
 
+import play.api.Play
 import play.api.mvc._
 
 
@@ -14,6 +15,6 @@ class HomeController @Inject()(webJarAssets: WebJarAssets) extends Controller {
   }
 
   def streaming = Action {
-    Ok.sendFile(new File("/public/small.mp4"))
+    Ok.sendFile(new File("conf/small.mp4"))
   }
 }
