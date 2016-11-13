@@ -13,12 +13,11 @@
 <div id="videoContainer">
     <div id="overlay"> Please don't download the video.</div>
     &nbsp;
-    <video width="60%" height="495" autoplay controls src="streamVideo" type="video/mp4">
+    <video width="60%" height="495" autoplay controls src="streamVideo" type="video/mp4" preload='auto'>
         Your browser does not support HTML5 video.
     </video>
 </div>
 </div>
-
 <style>
   div#videoContainer{
     position: relative;
@@ -31,6 +30,8 @@
     z-index: 1;
     text-align: center;
   }
+
+
 
 </style>
 }
