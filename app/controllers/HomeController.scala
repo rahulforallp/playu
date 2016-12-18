@@ -19,7 +19,7 @@ class HomeController @Inject()(webJarAssets: WebJarAssets) extends Controller {
 
   def streaming = {
     Action {
-      val file = new java.io.File("conf/vid2.mp4")
+      val file = new java.io.File("conf/vid4.mp4")
       val path: java.nio.file.Path = file.toPath
       val source: Source[ByteString, _] = FileIO.fromPath(path)
 
